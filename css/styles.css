@@ -4,6 +4,7 @@
     font-family: 'Staatliches', cursive;
     text-decoration: none;
     color: white;
+    scroll-behavior: smooth;
 }
 
 .main{
@@ -23,7 +24,7 @@
 
 .main-nav{
     height: 80px;
-    position: sticky;
+    position: fixed;
     left: 0px; 
     top: 0px;
     width: 100%;
