@@ -1,7 +1,7 @@
 *{
     margin: 0;
     text-align: center;
-    font-family: 'Bangers', cursive;
+    font-family: 'Staatliches', cursive;
     text-decoration: none;
     color: white;
 }
@@ -176,3 +176,182 @@
     box-sizing: border-box;
 }
 
+
+
+.inspire{
+    height: 300px;
+    width: 100%;
+    background-color: pink;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
+
+@media (max-width:600px){
+    .inspire{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.inspire-box{
+    overflow: hidden;
+}
+
+.inspire-box .image-box{
+    background-color: gray;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 0.6s;
+    
+}
+
+#ins1{
+    background-image: url(../media/elon.jfif);
+    height: 100%;
+    width:100%;
+}
+
+#ins2{
+    background-image: url(../media/trump.jpg);
+    height: 100%;
+    width: 100%;
+}
+
+#ins3{
+    background-image: url(../media/mark-zuckerberg.jpg);
+    height: 100%;
+    width: 100%;
+}
+
+#ins4{
+    background-image: url(../media/dims.jfif);
+    height: 100%;
+    width: 100%;
+}
+
+.inspire-box .over{
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+.inspire-box:hover div{
+    background-color: rgba(0,0,0,0.0);
+    
+}
+
+.image-box:hover{
+    transform: scale(1.1);
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1.5fr 1fr;
+    width: 90%;
+    height: 500px;
+    background-color: rgba(0,0,0,0.0);
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.boxx{
+    height: auto;
+    width:auto;
+/*    background-color: green;*/
+}
+
+.box1{
+/*    background-color: red;*/
+    background-image: url(../Media/logowhite.png);
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box2{
+/*    background-color: green;*/
+}
+
+.box2 h1{
+    font-size: 80px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.box3{
+/*    background-color: blue;*/
+}
+
+.explore{
+    width:240px;
+    height: 80px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.explore{
+    display: block;
+}
+.explore h2{
+    font-size: 50px;
+    color: black;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.explore:hover{
+    box-shadow: 4px 4px 00px 0px #000;
+}
+
+.wrapper-mission{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.mission-item{
+    
+    background-color: #da4528;
+    height: auto;
+}
+
+.mission-item h3{
+    font-size: 25px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px
+}
+
+.item-1{
+    background-color: wheat;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.item-2{
+    background-image: url(../Media/2x/convo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+.stocks{
+    width: 100%;
+    height: 650px; 
+    padding: 30px;
+    background-color: #a17b5a;
+    box-sizing: border-box;
+    
+    
+}
