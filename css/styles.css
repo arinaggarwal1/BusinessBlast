@@ -5,6 +5,7 @@
     font-weight: 100px;
     text-decoration: none;
     color: white;
+    overflow: hidden;
     scroll-behavior: smooth;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
