@@ -5,10 +5,8 @@
     font-weight: 100px;
     text-decoration: none;
     color: white;
-    =
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
     -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
     
 }
 
