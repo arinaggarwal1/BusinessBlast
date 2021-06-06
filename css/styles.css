@@ -1,16 +1,47 @@
 *{
     margin: 0;
     text-align: center;
-    font-family: 'Staatliches', cursive;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100px;
     text-decoration: none;
     color: white;
     scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+.typeform-widget{
+
+    overflow-y: hidden; 
+
+    
+}
+
+.typeform-widget:before {
+    content: '';
+    width: 100px;
+    height: 500px;
+    position: absolute;
+    background: #FFF;
+    left: 94%;
+}
+
+script{
+    -ms-overflow-style: none;
+    overflow-y: hidden; 
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}   
+
 
 .main{
     height: 100vh;
+    min-height: 765px; 
     width: 100%;
-    background-image: url(../Media/business.jpeg);
+    background-color: #2f2fa2;
+    background-image: url(../Media/skyline.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -28,7 +59,7 @@
     left: 0px; 
     top: 0px;
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5);
     z-index: 100;
     text-align: right;
     
@@ -38,8 +69,8 @@
     display: inline-block;
     background-color: rgba(0,0,0,0);
     height: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -53,13 +84,15 @@
 }
 
 .nav-button:hover{
-    background-color: white;
-    border-radius: 100px;
+    background-color: #f64c72;
     border-color: black;
+    border-radius: 0; 
+    color: black; 
 }
 
 .nav-button:hover h1{
     color: black;
+   
 }
 
 .nav-button h1{
@@ -67,6 +100,7 @@
     top: 50%;
     transform: translateY(-50%);
     transition-duration: 0.4s;
+    font-weight: 200;
 }
 
 .ham-nav{
@@ -85,7 +119,7 @@
     }
     
     .main-nav{
-        background-color: dimgray;
+        background-color: rgba(0,0,0,1);
     }
     
 }
@@ -96,11 +130,11 @@
     position: absolute;
     background-color: rgba(0,0,0,0);
     width: 150px;
-    height: 45px;
+    height: 70px;
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
-    background-image: url(../Media/Asset%206.png);
+    background-image: url(../Media/NewBB@2x.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -137,7 +171,7 @@
 }
 
 .topnav{
-    background-color: dimgray;
+    background-color: rgba(0,0,0,1);
     position: relative;
     top: 55px;
     display: none;
@@ -145,6 +179,10 @@
     padding-left: 10px;
     z-index: -1;
     
+}
+
+.topnav h1{
+    font-weight: 100;
 }
 
 @media(max-width:1070px){
@@ -160,21 +198,23 @@
 #myLinks a{
     display: block;
     text-align: left;
-    font-size: 50px;
+    font-size: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 30px;
+    padding-left: 10px;
     width: auto;
     transition-duration: 0.5s;
     border: 4px solid rgba(0,0,0,0);
 }
 
-#myLinks a:hover{
-    background-color: white;
-    border-radius: 30px; 
+#myLinks a:active{
+    background-color: #f64c72;
     color: black;
-    border: 4px solid black;
     box-sizing: border-box;
+}
+
+#home-topnav{
+    margin-top: 12px
 }
 
 
@@ -244,42 +284,72 @@
     transform: scale(1.1);
 }
 
+.wrapper-container{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    height: 70%;
+    min-height: 535px;
+    padding: 80px;
+    padding-top: 80px;
+    box-sizing: border-box;
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+    border-radius: 10px; 
+    
+    
+    
+}
 .wrapper{
     display: grid;
+/*    background-color: red;*/
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1.5fr 1fr;
-    width: 90%;
-    height: 500px;
-    background-color: rgba(0,0,0,0.0);
-    position: absolute;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
     left: 50%;
     top:50%;
     transform: translate(-50%,-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
-.boxx{
-    height: auto;
-    width:auto;
-/*    background-color: green;*/
-}
+
 
 .box1{
 /*    background-color: red;*/
-    background-image: url(../Media/logowhite.png);
+    background-image: url(../Media/logopink.png);
     background-size: contain; 
     background-position: center;
     background-repeat: no-repeat;
+/*    background-color: black;*/
+    
 }
 
 .box2{
+    background-image: url(../Media/NewBB@2x.png);
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
 /*    background-color: green;*/
-}
+    }   
 
-.box2 h1{
-    font-size: 46px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+@media (max-width:1200px){
+    .wrapper-container{
+        box-shadow: none;
+        padding: 0px;
+        top: 60%;
+    }
+    
+    .wrapper{
+        grid-template-rows: 200px 200px; 
+    }
 }
 
 .box3{
@@ -317,39 +387,82 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-   
+
+.item-2 h3{
+    display: none;
+}
+
 @media(max-width:1100px){
-    .wrapper-mission{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr .5fr; 
+    
+    
+    .item-1{
+         
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
+    
+    .item-1 h3{
+     
+       
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .wrapper-mission{
+        grid-template-rows: 1fr; 
+        grid-template-columns: 1fr;
+    }
+    
+    .item-2 h3{
+        display: inline;
+      
+        font-size: 25px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px;
+        font-weight: 150;
+
+    }
+    
+    .item-2{
+        background-image: url(../Media/860w/) none;
+    }
+   
+    
+    
 }
     
 
 
 .mission-item{
     
-    background-color: #da4528;
+    background-color: #242582;
     height: auto;
 }
 
-.mission-item h3{
+.item-1 h3{
     font-size: 25px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    padding: 20px
+    padding: 20px;
+    font-weight: 150;
 }
 
 .item-1{
-    background-color: #a17b5a;
+    background-color: #f64c72;
     box-sizing: border-box;
     height: auto;
 }
 
+
+
 .item-2{
-    background-image: url(../Media/2x/convo.png);
-    background-size: contain;
+    background-image: url(../Media/missionrocket.png);
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
    
@@ -360,7 +473,7 @@
     height: 650px; 
     padding: 35px;
 /*    background-color: #a17b5a;*/
-    background-image: url(../Media/wood.jfif);
+    background-color: #242582;
     box-sizing: border-box;
     
     
@@ -375,28 +488,165 @@
     box-shadow: 10px 10px 50px 5px #000;
 }
 
+.about-header{
+    height: 250px;
+    background-color: #f64c72;
+    box-sizing: border-box;
+    padding: 60px;
+}
+
+.watch-header{
+    height: 400px;
+    background-color: #f64c72;
+    box-sizing: border-box;
+    padding: 60px;
+}
+
+.watch-image{
+    position: relative; 
+    height: 100%; 
+    width: 100%; 
+    background-image: url(../Media/BBlogo.png);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about-image{
+    position: relative;
+    height: 100%; 
+    width: 100%;
+    background-image: url(../Media/aboutrocketblue@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 .about{
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    background-image: url(../Media/brick1.jpg);
+    background-color: #f64c72;
 }
+
+.watch{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    background-color: #242582;
+
+}
+
+@media (max-width:1299px){
+    .watch{
+        grid-template-columns: 1fr; 
+    
+    }
+    
+    .watch-item:nth-child(1){
+        background-color: #f64c72;
+    }
+
+    .watch-item:nth-child(3){
+        background-color: #f64c72;
+    }
+    
+   
+    
+    
+
+}
+
+.hidden-mission{
+    position: relative;
+    height: 24vw; 
+    background-color: #242582;
+    padding: 5%;
+    box-sizing: border-box;
+    
+    
+}
+
+@media(min-width:1101px){
+    .hidden-mission{
+        display: none;
+    }
+}
+
+.hid-miss-img{
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    background-image: url(../Media/missionrocket.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+}
+
+@media(max-width:700px){
+    .watch-video iframe{
+        width: 100%;
+        height: calc(0.5*100vw); 
+    }
+}
+@media (min-width:1300px){
+   
+    
+    .watch-item:nth-child(1){
+    background-color: #f64c72;
+    }
+
+.watch-item:nth-child(4){
+    background-color: #f64c72;
+}
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+.watch-item{
+    height: 500px;
+    padding: 30px;
+    
+}
+.watch-video{
+    position: relative; 
+    top:50%;
+    transform: translateY(-50%);
+}
+
+
+
 
 .about-1{
     padding: 50px;
-    padding-top: 150px;
-    padding-bottom: 150px; 
-    font-size: 35px;
-    background-color: rgba(0,0,0,0.4);
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    font-size: 25px;
+    background-color: #242582;
+    
 }
 
 .about-2{
     
     background-size: cover;
+    background-color: 
+}
+
+.watch-video iframe{
+    border-radius: 0px;
 }
 
 .me{
-    height: 20vw;
-    width: 20vw; 
+    height: 15vw;
+    width: 15vw; 
     background-image: url(../Media/Me1.png);
     background-size: cover;
 
@@ -407,6 +657,8 @@
     border-radius: 40%;
     box-shadow: 10px 10px 50px 10px #000;
 }
+
+
 
 @media (max-width:1100px){
     .about{
@@ -422,7 +674,7 @@
     }
     
     .about-1{
-        background-color: rgba(0,0,0,0.4);
+        
         border-bottom: 2px solid black;
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
@@ -432,5 +684,14 @@
     .about-2{
 /*        background-color: red;*/
         height: 500px;
+           background-color: #f64c72;
+        
     }
+    
+    .contact{
+        height:100px; 
+        background-color: red;
+    }
+    
+    
 }
